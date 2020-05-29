@@ -142,14 +142,14 @@ private:
 
 
 int main() {
-    Material      ivory(1.0, Vec4f(0.6,  0.3, 0.1, 0.0), Vec3f(0.4, 0.4, 0.3),   50.);
-    Material red_rubber(1.0, Vec4f(0.9,  0.1, 0.0, 0.0), Vec3f(0.3, 0.1, 0.1),   10.);
+    Material      ivory(1.0, Vec4f(0.6,  0.3, 0.1, 0.0), Vec3f(0.4, 0.4, 0.3),   30.);
+    Material red_rubber(1.0, Vec4f(0.9,  0.1, 0.0, 0.0), Vec3f(0.3, 0.1, 0.1),   70.);
 
     std::vector<Sphere> spheres;
-    spheres.push_back(Sphere(Vec3f(-3,    0,   -16), 2,      ivory));
-    spheres.push_back(Sphere(Vec3f( 1.5, -0.5, -18), 3, red_rubber));
+    spheres.push_back(Sphere(Vec3f(-9,    0,   -13), 2,      ivory));
+    spheres.push_back(Sphere(Vec3f( 5.5, -2.5, -20), 3, red_rubber));
     std::vector<Light>  lights;
-    lights.push_back(Light(Vec3f( 30, 50, -25), 3));
+    lights.push_back(Light(Vec3f( 20, 40, -35), 3));
     Renderer renderer;
     renderer.render(spheres, lights);
 
